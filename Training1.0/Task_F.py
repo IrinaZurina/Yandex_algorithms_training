@@ -1,0 +1,7 @@
+a, b, c, d = list(map(int, input().split()))
+squares_and_sides = dict()
+squares_and_sides[(a + c) * max(b, d)] = (a + c, max(b, d))
+squares_and_sides[(a + d) * max(b, c)] = (a + d, max(b, c))
+squares_and_sides[(b + c) * max(a, d)] = (b + c, max(a, d))
+squares_and_sides[(b + d) * max(a, c)] = (b + d, max(a, c))
+print(*squares_and_sides[min(squares_and_sides.keys())])
